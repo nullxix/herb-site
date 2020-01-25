@@ -1,7 +1,7 @@
 import React from 'react'
 import {hot} from "react-hot-loader"; //allows hot reloading, which is useful for testing
 
-const App = props => {
+function App(props) {
 
     return (
         <>
@@ -9,6 +9,5 @@ const App = props => {
         </>
     )
 }
-
 
 export default hot(module)(App)
