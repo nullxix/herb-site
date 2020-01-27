@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(250, 250, 250);
+    margin: 0;
+    color: #222;
+}
+
+.header {
+    text-align: center;
+    background-color: #4D8C57;
+    padding: 35px 0 0 0;
+}
+
+.logo {
+    width: 45%;
+}
+
+.navbar {
+    background-color: rgba(250, 250, 250, 0.5); 
+    display: flex;
+    justify-content: space-evenly;
+    margin: 35px 0 0;
+    padding: 15px;
+}
+
+.link {
+    color: #013220;
+    text-decoration-line: none;
+    font-size: 20px;
+}
+
+.welcome-content, .herb-details {
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #013220;
+}
+
+.welcome-content p, .herb-details p {
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        width: 35%;
+    }
+    
+    .navbar {
+        padding: 25px 20px;
+    }
+    
+    .link {
+        font-size: 25px;
+    }   
+    
+    .welcome-content, .herb-details {
+        padding: 25px;
+    }
+    
+    .welcome-content h2, .herb-details h2 {
+        font-size: 30px;
+    }
+    
+    .welcome-content p, .herb-details p {
+        font-size: 25px;
+    }
+}

@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 // blueprint for the herb form
-
 const herbsSchema = new Schema(
     {
         herbname: {
@@ -11,7 +10,6 @@ const herbsSchema = new Schema(
         },
         location: {
             type: String,
-            
         },
         uses: {
             type: String,
@@ -24,10 +22,8 @@ const herbsSchema = new Schema(
             type: Boolean,
             required: true // this will be applied to top 20 most popular
         }
-
     }
 )
 
 module.exports = mongoose.model("Herbs", herbsSchema)
-
 //Hopefully this fulfills the needs of our Schema!
