@@ -1,12 +1,15 @@
 import React from 'react'
 import {hot} from "react-hot-loader"; //allows hot reloading, which is useful for testing
 
-function App(props) {
+import Header from "./components/Header.js"
+
+function App() {
 
     return (
-        <>
-            Welcome to the website!
-        </>
+        <div>
+            <Header />
+            <p>Welcome to Mothers Medicinal Herbal API Library - Where Dreams Come True.</p>
+        </div>
     )
 }
 

@@ -1,0 +1,10 @@
+
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 10px;
+}
