@@ -11,8 +11,8 @@ function App() {
         <div>
             <Header />
             <Switch>
-                <Route path="/welcomePage"><WelcomePage /></Route>
-                <Route path="/popularHerbs"><PopularHerbs /></Route>
+                <Route path="/welcome-page"><WelcomePage /></Route>
+                <Route path="/popular-herbs"><PopularHerbs /></Route>
                 <Route exact path="/"><Herbs /></Route>
             </Switch>
         </div>

@@ -4,13 +4,13 @@ const Herbs = require("../models/Herbs.js");
 
 //This will be the Top Twenty Array!
 const mothersMed = [
-//   {
-//     herbname: "Calendula",
-//     location: "North America",
-//     uses: "Skin",
-//     other: "This plant is Edible",
-//     popularUse: true
-//   },
+  {
+    herbname: "Calendula",
+    location: "North America",
+    uses: "Skin",
+    other: "This plant is Edible",
+    popularUse: true
+  },
   {
     herbname: "Cayenne",
     location: "North America",
@@ -257,11 +257,11 @@ const mothersMed = [
     popularUse: false
   },
   {
-    // herbname: "Black Currant",
-    // location: "North America",
-    // uses: "Pathogenic",
-    // other: "Great for cancer patients.",
-    // popularUse: false
+    herbname: "Black Currant",
+    location: "North America",
+    uses: "Pathogenic",
+    other: "Great for cancer patients.",
+    popularUse: false
   },
   {
     herbname: "Burdock Root",
@@ -294,6 +294,7 @@ const mothersMed = [
 //   res.status(200).send(mothersMed);
 // });
 
+// GET all
 mothersMedRouter.get("/", (req, res, next) => {
   Herbs.find((err, herbs) => {
     if (err) {

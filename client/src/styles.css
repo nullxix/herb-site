@@ -11,7 +11,7 @@ body {
 }
 
 .logo {
-    width: 250px;
+    width: 45%;
 }
 
 .navbar {
@@ -25,7 +25,7 @@ body {
 .link {
     color: #013220;
     text-decoration-line: none;
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .welcome-content, .herb-details {
@@ -34,6 +34,33 @@ body {
     color: #013220;
 }
 
-.welcome-content p {
+.welcome-content p, .herb-details p {
     font-size: 20px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        width: 35%;
+    }
+    
+    .navbar {
+        padding: 25px 20px;
+    }
+    
+    .link {
+        font-size: 25px;
+    }   
+    
+    .welcome-content, .herb-details {
+        padding: 25px;
+    }
+    
+    .welcome-content h2, .herb-details h2 {
+        font-size: 30px;
+    }
+    
+    .welcome-content p, .herb-details p {
+        font-size: 25px;
+    }
 }
