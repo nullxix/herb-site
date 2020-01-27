@@ -344,4 +344,17 @@ mothersMedRouter.put("/:herbsId", (req, res, next) => {
   );
 });
 
+//if we ever need to delete an entry
+// mothersMedRouter.delete("/:herbsId", (req, res)=>{
+//     Herbs.findOneAndDelete(
+//         {id: req.params.herbId}, (err, deletedHerbs)=>{
+//             if(err){
+//                 res.status(500)
+//                 return next(err)
+//             }
+//             return res.status(200).send('successfully deleted herb data')
+//         }
+//     )
+// })
+
 module.exports = mothersMedRouter;
