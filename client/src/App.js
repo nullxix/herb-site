@@ -1,13 +1,22 @@
-import React from 'react'
-import {hot} from "react-hot-loader"; //allows hot reloading, which is useful for testing
+import React from "react"
+import {Switch, Route} from "react-router-dom"
 
-function App(props) {
+import Header from "./components/Header"
+import WelcomePage from "./components/WelcomePage"
+import PopularHerbs from "./components/PopularHerbs"
+import Herbs from "./components/Herbs"
 
+function App() {
     return (
-        <>
-            Welcome to the website!
-        </>
+        <div>
+            <Header />
+            <Switch>
+                <Route path="/welcomePage"><WelcomePage /></Route>
+                <Route path="/popularHerbs"><PopularHerbs /></Route>
+                <Route exact path="/"><Herbs /></Route>
+            </Switch>
+        </div>
     )
 }
 
-export default hot(module)(App)
+export default App

@@ -1,43 +1,37 @@
 {
-  "name": "herb-site",
-  "version": "1.0.0",
-  "description": "online portal for herbalism databse",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nullxix/herb-site.git"
-  },
-  "keywords": [
-    "herbs"
-  ],
-  "author": "Nicholas Black, Jared Manwaring, Isa Abutaa, Sam Betzen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nullxix/herb-site/issues"
-  },
-  "homepage": "https://github.com/nullxix/herb-site#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "css-loader": "^1.0.0",
-    "style-loader": "^0.23.0",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.10.1"
-  },
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.8.9",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-hot-loader": "^4.12.19"
-  }
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:4500"
 }
