@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 // blueprint for the herb form
 const herbsSchema = new Schema(
     {
-        herbname: {
+        herbName: {
             type: String,
             required: true //this will be applied to the searches
         },

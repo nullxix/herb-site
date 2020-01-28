@@ -2,13 +2,14 @@ const express = require("express")
 const app = express()
 const morgan = require("morgan")
 const mongoose = require("mongoose")
+require('dotenv').config()
 
 //middleware
 app.use(express.json())
 app.use(morgan("dev"))
 
 //Change herbsId
-mongoose.connect('mongodb://localhost:27017/herbsdb',
+mongoose.connect(process.env.DB_LOCATION,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
