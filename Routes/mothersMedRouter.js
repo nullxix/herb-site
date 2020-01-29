@@ -1,6 +1,10 @@
 const express = require("express");
 const mothersMedRouter = express.Router();
 const Herbs = require("../models/Herbs.js");
+const Admin = require('../models/Admin.js')
+const jwt = require('jsonwebtoken')
+const expressJwt = require('express-jwt')
+const bcrypt = require('bcrypt')
 
 //This will be the Top Twenty Array!
 const mothersMed = [
@@ -306,7 +310,7 @@ mothersMedRouter.get("/", (req, res, next) => {
 });
 
 //if we end up posting to this...
-mothersMedRouter.post("/", (req, res, next) => {
+mothersMedRouter.post("/", expressJwt({secret: process.env.SECRET}), (req, res, next) => {
   const newHerb = new Herbs(req.body);
   newHerb.save((err, savedHerb) => {
     if (err) {
@@ -329,7 +333,7 @@ mothersMedRouter.get("/search/popularUse", (req, res, next) => {
 });
 
 //If we want to edit an entry
-mothersMedRouter.put("/:herbsId", (req, res, next) => {
+mothersMedRouter.put("/:herbsId", expressJwt({secret: process.env.SECRET}), (req, res, next) => {
   Herbs.findOneAndUpdate(
     { _id: req.params.herbsId },
     req.body,
@@ -356,5 +360,23 @@ mothersMedRouter.put("/:herbsId", (req, res, next) => {
 //         }
 //     )
 // })
+
+mothersMedRouter.post('/login', (req, res, next) => {
+  Admin.findOne({}, (err, doc) => {
+      err && console.log(err)
+
+      let passwordCorrect = false; 
+      if(req.body.password && doc.password)
+        passwordCorrect = bcrypt.compareSync(req.body.password, doc.password)
+
+      if(passwordCorrect){
+        const token = jwt.sign({name: 'admin'}, process.env.SECRET)
+        res.status(201).send({success: true, token})
+      } else {
+        console.log('WRONG')
+        res.send({msg: 'unauthorized'})
+      }
+  })
+})
 
 module.exports = mothersMedRouter;
