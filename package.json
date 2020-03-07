@@ -1,7 +1,6 @@
 {
   "name": "isas-herb-stuff",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,5 +17,15 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.9",
     "morgan": "^1.9.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nullxix/herb-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nullxix/herb-site/issues"
+  },
+  "homepage": "https://github.com/nullxix/herb-site#readme",
+  "description": ""
 }
